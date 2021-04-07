@@ -10,7 +10,6 @@ module.exports = {
   async find(req, res) {
     try {
       const user = await User.findOne({ where: { id: req.params.id } });
-      console.log('req.query', req.params);
       return res.json(user);
     } catch (error) {
       return (error)
